@@ -1,0 +1,13 @@
+title: "시즌"
+version: "1.0.0"
+package_name: "seezn"
+developer: "soju6jan"
+description: "시즌"
+home: "https://github.com/soju6jan/seezn"
+more: 
+
+require_plugin: 
+  - "https://github.com/soju6jan/sjva"
+  - "https://github.com/soju6jan/wv_tool"
+
+
