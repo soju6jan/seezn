@@ -24,7 +24,7 @@ $(document).ready(function(){
     $("#url").val(tmp);
     $("#analyze_btn").click();
   } else {
-    globalSendCommand('previous_analyze', null, null, null, null, function(ret){
+    globalSendCommand('previous_analyze', null, null, null, function(ret){
       if (ret.data != null) {
         make_program_page(ret.data);
       }
@@ -41,7 +41,7 @@ $("body").on('click', '#analyze_btn', function(e) {
     });
     return;
   }
-  globalSendCommand('analyze', $("#url").val(), null, null, null, function(ret){
+  globalSendCommand('analyze', $("#url").val(), null, null, function(ret){
     //console.log(ret)
     /*
     if (ret.url_type == 'episode') {
@@ -125,7 +125,7 @@ $("body").on('click', '#more_btn', function(e){
   e.preventDefault();
   //code = current_data.code;
   page = parseInt($(this).data('page')) + 1;
-  globalSendCommand('program_page', $(this).data('code'), page, null, null, function(ret){
+  globalSendCommand('program_page', $(this).data('code'), page,  null, function(ret){
     make_program_page(ret);
   });
 });
