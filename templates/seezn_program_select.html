@@ -42,19 +42,7 @@ $("body").on('click', '#analyze_btn', function(e) {
     return;
   }
   globalSendCommand('analyze', $("#url").val(), null, null, function(ret){
-    //console.log(ret)
-    /*
-    if (ret.url_type == 'episode') {
-      $("#url").val(ret.episode.programid);
-      $("#analyze_btn").click();
-    } else if (ret.url_type == 'program') {
-      make_program_page(ret);
-    } else {
-      notify("프로그램 코드를 입력하세요");
-      return;
-    }*/
     make_program_page(ret);
-
   });
 });
 
@@ -72,7 +60,6 @@ function make_program_page(ret) {
 
   str += '<hr>';
   for (i in data) {
-    //console.log(data[i])
     str += j_row_start();
     tmp = '<img src="' + data[i].still_cut_image + '" class="img-fluid">';
     str += j_col(3, tmp);
